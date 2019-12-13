@@ -1,0 +1,64 @@
+{
+  "name": "hey-yobot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mike-EEE's Yobot. Hey YOBOT!!! YOOOOOOOOOOOOOOO!!!!",
+  "author": "Mike-EEE <yobot@dragonspark.network>",
+  "license": "MIT",
+  "repository": "https://github.com/Mike-EEE/Yobot.git",
+  "homepage": "https://github.com/Mike-EEE/Yobot",
+  "bugs": "https://github.com/Mike-EEE/Yobot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "dev": "nodemon --exec \"npm start\"",
+    "start": "probot run ./lib/index.js",
+    "lint": "standard **/*.ts --fix",
+    "test": "jest && standard **/*.ts",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.35.0",
+    "@types/bunyan": "^1.8.6",
+    "@types/lodash": "^4.14.149",
+    "@types/url-template": "^2.0.28",
+    "probot": "^9.5.3",
+    "probot-commands": "^1.1.0",
+    "probot-metadata": "^1.0.0",
+    "url-template": "^2.0.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/nock": "^11.1.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "nodemon": "^1.19.4",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "parser": "@typescript-eslint/parser",
+    "env": [
+      "jest"
+    ],
+    "plugins": [
+      "typescript"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
